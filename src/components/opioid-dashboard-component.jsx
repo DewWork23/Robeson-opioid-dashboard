@@ -34,22 +34,30 @@ const comparisonData = [
 
 const OpioidDashboard = () => {
   return (
-    <div className="w-full min-h-screen p-4">
+    <div style={{ width: '100%', minHeight: '100vh', padding: '20px' }}>
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl font-bold text-center py-4 mb-4 md:text-3xl">
+          <CardTitle style={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center',
+            fontSize: '2rem', 
+            fontWeight: 'bold',
+            padding: '1rem',
+            marginBottom: '1rem'
+          }}>
             Robeson County Opioid Crisis Analytics (2021-2022)
           </CardTitle>
         </CardHeader>
 
         <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div style={{ display: 'grid', gap: '20px', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
             {/* Overdose Trends */}
-            <Card className="p-4">
-              <h3 className="text-xl font-bold mb-4 text-center md:text-2xl">
+            <Card style={{ padding: '20px' }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' }}>
                 Robeson County Overdose Trends (per 100k people)
               </h3>
-              <div className="w-full" style={{ height: 'min(300px, 50vh)' }}>
+              <div style={{ width: '100%', height: '400px' }}>
                 <ResponsiveContainer>
                   <LineChart data={overdoseData}>
                     <CartesianGrid strokeDasharray="3 3" />
@@ -72,21 +80,21 @@ const OpioidDashboard = () => {
                   </LineChart>
                 </ResponsiveContainer>
               </div>
-              <div className="mt-4">
-                <p className="font-bold text-center">2021 Numbers:</p>
+              <div style={{ marginTop: '1rem' }}>
+                <p style={{ fontWeight: 'bold', textAlign: 'center' }}>2021 Numbers:</p>
                 <div>
-                  <p className="text-sm md:text-base">&bull; 127 people died from overdose (rate: 97 per 100,000 residents)</p>
-                  <p className="text-sm md:text-base">&bull; 612 people visited emergency rooms for overdose (rate: 469 per 100,000 residents)</p>
+                  <p>&bull; 127 people died from overdose (rate: 97 per 100,000 residents)</p>
+                  <p>&bull; 612 people visited emergency rooms for overdose (rate: 469 per 100,000 residents)</p>
                 </div>
               </div>
             </Card>
 
             {/* County vs State Comparison */}
-            <Card className="p-4">
-              <h3 className="text-xl font-bold mb-4 text-center md:text-2xl">
+            <Card style={{ padding: '20px' }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' }}>
                 Robeson County vs North Carolina Average (2021)
               </h3>
-              <div className="w-full" style={{ height: 'min(300px, 50vh)' }}>
+              <div style={{ width: '100%', height: '400px' }}>
                 <ResponsiveContainer>
                   <BarChart data={comparisonData}>
                     <CartesianGrid strokeDasharray="3 3" />
@@ -99,45 +107,45 @@ const OpioidDashboard = () => {
                   </BarChart>
                 </ResponsiveContainer>
               </div>
-              <div className="mt-4">
-                <p className="font-bold text-center">2021 Robeson vs. North Carolina:</p>
+              <div style={{ marginTop: '1rem' }}>
+                <p style={{ fontWeight: 'bold', textAlign: 'center' }}>2021 Robeson vs. North Carolina:</p>
                 <div>
-                  <p className="text-sm md:text-base">&bull; Overdose deaths: Robeson had 97 per 100,000 residents vs. North Carolina's 39</p>
-                  <p className="text-sm md:text-base">&bull; Emergency room visits: Robeson had 469 per 100,000 residents vs. North Carolina's 161</p>
-                  <p className="text-sm md:text-base">&bull; Illicit drugs were involved in 82% of Robeson's overdoses vs. 78% statewide</p>
-                </div>
-              </div>
-            </Card>
-
-            {/* Key Metrics */}
-            <Card className="md:col-span-2 p-4">
-              <h3 className="text-xl font-bold mb-4 text-center md:text-2xl">
-                2021 Key Statistics
-              </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="bg-red-100 p-4 rounded">
-                  <p className="text-red-800 text-sm md:text-base">Overdose Deaths</p>
-                  <p className="text-xl font-bold text-red-900">127</p>
-                  <p className="text-sm text-red-800">97 per 100k people</p>
-                </div>
-                <div className="bg-blue-100 p-4 rounded">
-                  <p className="text-blue-800 text-sm md:text-base">Emergency Department Visits</p>
-                  <p className="text-xl font-bold text-blue-900">612</p>
-                  <p className="text-sm text-blue-800">469 per 100k people</p>
-                </div>
-                <div className="bg-yellow-100 p-4 rounded">
-                  <p className="text-yellow-800 text-sm md:text-base">Illicit Drug Involvement</p>
-                  <p className="text-xl font-bold text-yellow-900">82%</p>
-                  <p className="text-sm text-yellow-800">of overdose deaths</p>
-                </div>
-                <div className="bg-green-100 p-4 rounded">
-                  <p className="text-green-800 text-sm md:text-base">Prescribed Opioids</p>
-                  <p className="text-xl font-bold text-green-900">22,350</p>
-                  <p className="text-sm text-green-800">17% of population</p>
+                  <p>&bull; Overdose deaths: Robeson had 97 per 100,000 residents vs. North Carolina's 39</p>
+                  <p>&bull; Emergency room visits: Robeson had 469 per 100,000 residents vs. North Carolina's 161</p>
+                  <p>&bull; Illicit drugs were involved in 82% of Robeson's overdoses vs. 78% statewide</p>
                 </div>
               </div>
             </Card>
           </div>
+
+          {/* Key Metrics */}
+          <Card style={{ marginTop: '20px', padding: '20px' }}>
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' }}>
+              2021 Key Statistics
+            </h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
+              <div style={{ backgroundColor: '#fee2e2', padding: '1rem', borderRadius: '8px' }}>
+                <p style={{ color: '#991b1b' }}>Overdose Deaths</p>
+                <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#7f1d1d' }}>127</p>
+                <p style={{ fontSize: '0.875rem', color: '#991b1b' }}>97 per 100k people</p>
+              </div>
+              <div style={{ backgroundColor: '#dbeafe', padding: '1rem', borderRadius: '8px' }}>
+                <p style={{ color: '#1e40af' }}>Emergency Department Visits</p>
+                <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#1e3a8a' }}>612</p>
+                <p style={{ fontSize: '0.875rem', color: '#1e40af' }}>469 per 100k people</p>
+              </div>
+              <div style={{ backgroundColor: '#fef9c3', padding: '1rem', borderRadius: '8px' }}>
+                <p style={{ color: '#854d0e' }}>Illicit Drug Involvement</p>
+                <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#713f12' }}>82%</p>
+                <p style={{ fontSize: '0.875rem', color: '#854d0e' }}>of overdose deaths</p>
+              </div>
+              <div style={{ backgroundColor: '#dcfce7', padding: '1rem', borderRadius: '8px' }}>
+                <p style={{ color: '#166534' }}>Prescribed Opioids</p>
+                <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#14532d' }}>22,350</p>
+                <p style={{ fontSize: '0.875rem', color: '#166534' }}>17% of population</p>
+              </div>
+            </div>
+          </Card>
         </CardContent>
       </Card>
     </div>
