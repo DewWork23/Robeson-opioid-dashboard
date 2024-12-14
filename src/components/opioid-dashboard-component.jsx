@@ -19,7 +19,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-// Data constants remain the same
+// Data constants
 const overdoseData = [
   { year: "2019", deaths: 45, edVisits: 220, illicitInvolvement: 65 },
   { year: "2020", deaths: 82, edVisits: 380, illicitInvolvement: 75 },
@@ -203,33 +203,39 @@ const OpioidDashboard = () => {
 
             {/* Key Metrics - Full Width */}
             <Card style={{ padding: '20px', width: '100%' }}>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '1.5rem', textAlign: 'center' }}>
+              <h3 style={{ 
+                fontSize: '1.25rem', 
+                fontWeight: 'bold', 
+                marginBottom: '1rem', 
+                textAlign: 'center' 
+              }}>
                 2021 Key Statistics
               </h3>
               <div style={{ 
-                display: 'grid', 
-                gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
-                gap: '20px' 
+                display: 'grid',
+                gridTemplateColumns: 'repeat(4, 1fr)',
+                gap: '10px',
+                padding: '0 10px'
               }}>
-                <div style={{ backgroundColor: '#fee2e2', padding: '1rem', borderRadius: '8px', textAlign: 'center' }}>
-                  <p style={{ color: '#991b1b', marginBottom: '0.5rem' }}>Overdose Deaths</p>
-                  <p style={{ fontSize: '1.75rem', fontWeight: 'bold', color: '#7f1d1d', marginBottom: '0.5rem' }}>127</p>
-                  <p style={{ fontSize: '0.875rem', color: '#991b1b' }}>97 per 100k people</p>
+                <div style={{ backgroundColor: '#fee2e2', padding: '0.75rem', borderRadius: '8px', textAlign: 'center' }}>
+                  <p style={{ color: '#991b1b', marginBottom: '0.25rem', fontSize: '0.9rem' }}>Overdose Deaths</p>
+                  <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#7f1d1d', marginBottom: '0.25rem' }}>127</p>
+                  <p style={{ fontSize: '0.8rem', color: '#991b1b' }}>97 per 100k people</p>
                 </div>
-                <div style={{ backgroundColor: '#dbeafe', padding: '1rem', borderRadius: '8px', textAlign: 'center' }}>
-                  <p style={{ color: '#1e40af', marginBottom: '0.5rem' }}>Emergency Department Visits</p>
-                  <p style={{ fontSize: '1.75rem', fontWeight: 'bold', color: '#1e3a8a', marginBottom: '0.5rem' }}>612</p>
-                  <p style={{ fontSize: '0.875rem', color: '#1e40af' }}>469 per 100k people</p>
+                <div style={{ backgroundColor: '#dbeafe', padding: '0.75rem', borderRadius: '8px', textAlign: 'center' }}>
+                  <p style={{ color: '#1e40af', marginBottom: '0.25rem', fontSize: '0.9rem' }}>Emergency Department Visits</p>
+                  <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#1e3a8a', marginBottom: '0.25rem' }}>612</p>
+                  <p style={{ fontSize: '0.8rem', color: '#1e40af' }}>469 per 100k people</p>
                 </div>
-                <div style={{ backgroundColor: '#fef9c3', padding: '1rem', borderRadius: '8px', textAlign: 'center' }}>
-                  <p style={{ color: '#854d0e', marginBottom: '0.5rem' }}>Illicit Drug Involvement</p>
-                  <p style={{ fontSize: '1.75rem', fontWeight: 'bold', color: '#713f12', marginBottom: '0.5rem' }}>82%</p>
-                  <p style={{ fontSize: '0.875rem', color: '#854d0e' }}>of overdose deaths</p>
+                <div style={{ backgroundColor: '#fef9c3', padding: '0.75rem', borderRadius: '8px', textAlign: 'center' }}>
+                  <p style={{ color: '#854d0e', marginBottom: '0.25rem', fontSize: '0.9rem' }}>Illicit Drug Involvement</p>
+                  <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#713f12', marginBottom: '0.25rem' }}>82%</p>
+                  <p style={{ fontSize: '0.8rem', color: '#854d0e' }}>of overdose deaths</p>
                 </div>
-                <div style={{ backgroundColor: '#dcfce7', padding: '1rem', borderRadius: '8px', textAlign: 'center' }}>
-                  <p style={{ color: '#166534', marginBottom: '0.5rem' }}>Prescribed Opioids</p>
-                  <p style={{ fontSize: '1.75rem', fontWeight: 'bold', color: '#14532d', marginBottom: '0.5rem' }}>22,350</p>
-                  <p style={{ fontSize: '0.875rem', color: '#166534' }}>17% of population</p>
+                <div style={{ backgroundColor: '#dcfce7', padding: '0.75rem', borderRadius: '8px', textAlign: 'center' }}>
+                  <p style={{ color: '#166534', marginBottom: '0.25rem', fontSize: '0.9rem' }}>Prescribed Opioids</p>
+                  <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#14532d', marginBottom: '0.25rem' }}>22,350</p>
+                  <p style={{ fontSize: '0.8rem', color: '#166534' }}>17% of population</p>
                 </div>
               </div>
             </Card>
