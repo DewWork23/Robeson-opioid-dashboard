@@ -161,12 +161,12 @@ const OpioidDashboard = () => {
                   </ResponsiveContainer>
                 </div>
                 <div style={{ marginTop: '1.5rem' }}>
-                  <p style={{ fontWeight: 'bold', textAlign: 'center', marginBottom: '0.5rem' }}>2021 Numbers:</p>
-                  <div style={{ textAlign: 'left' }}>
-                    <p>&bull; 127 people died from overdose (rate: 97 per 100,000 residents)</p>
-                    <p>&bull; 612 people visited emergency rooms for overdose (rate: 469 per 100,000 residents)</p>
-                  </div>
+                <p style={{ fontWeight: 'bold', textAlign: 'center', marginBottom: '0.5rem' }}>2021 Numbers:</p>
+                <div style={{ textAlign: 'center' }}>
+                <p>&bull; 127 people died from overdose (rate: 97 per 100,000 residents)</p>
+                <p>&bull; 612 people visited emergency rooms for overdose (rate: 469 per 100,000 residents)</p>
                 </div>
+                </div>  
               </Card>
 
               {/* County vs State Comparison */}
@@ -191,13 +191,13 @@ const OpioidDashboard = () => {
                   </ResponsiveContainer>
                 </div>
                 <div style={{ marginTop: '1.5rem' }}>
-                  <p style={{ fontWeight: 'bold', textAlign: 'center', marginBottom: '0.5rem' }}>2021 Robeson vs. North Carolina:</p>
-                  <div style={{ textAlign: 'left' }}>
-                    <p>&bull; Overdose deaths: Robeson had 97 per 100,000 residents vs. North Carolina&apos;s 39</p>
-                    <p>&bull; Emergency room visits: Robeson had 469 per 100,000 residents vs. North Carolina&apos;s 161</p>
-                    <p>&bull; Illicit drugs were involved in 82% of Robeson&apos;s overdoses vs. 78% statewide</p>
-                  </div>
+                <p style={{ fontWeight: 'bold', textAlign: 'center', marginBottom: '0.5rem' }}>2021 Robeson vs. North Carolina:</p>
+                <div style={{ textAlign: 'center' }}>
+                <p>&bull; Overdose deaths: Robeson had 97 per 100,000 residents vs. North Carolina&apos;s 39</p>
+                 <p>&bull; Emergency room visits: Robeson had 469 per 100,000 residents vs. North Carolina&apos;s 161</p>
+                <p>&bull; Illicit drugs were involved in 82% of Robeson&apos;s overdoses vs. 78% statewide</p>
                 </div>
+      </div>
               </Card>
             </div>
 
@@ -212,32 +212,34 @@ const OpioidDashboard = () => {
                 2021 Key Statistics
               </h3>
               <div style={{ 
-                display: 'grid',
-                gridTemplateColumns: 'repeat(4, 1fr)',
-                gap: '10px',
-                padding: '0 10px'
-              }}>
-                <div style={{ backgroundColor: '#fee2e2', padding: '0.75rem', borderRadius: '8px', textAlign: 'center' }}>
-                  <p style={{ color: '#991b1b', marginBottom: '0.25rem', fontSize: '0.9rem' }}>Overdose Deaths</p>
-                  <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#7f1d1d', marginBottom: '0.25rem' }}>127</p>
-                  <p style={{ fontSize: '0.8rem', color: '#991b1b' }}>97 per 100k people</p>
-                </div>
-                <div style={{ backgroundColor: '#dbeafe', padding: '0.75rem', borderRadius: '8px', textAlign: 'center' }}>
-                  <p style={{ color: '#1e40af', marginBottom: '0.25rem', fontSize: '0.9rem' }}>Emergency Department Visits</p>
-                  <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#1e3a8a', marginBottom: '0.25rem' }}>612</p>
-                  <p style={{ fontSize: '0.8rem', color: '#1e40af' }}>469 per 100k people</p>
-                </div>
-                <div style={{ backgroundColor: '#fef9c3', padding: '0.75rem', borderRadius: '8px', textAlign: 'center' }}>
-                  <p style={{ color: '#854d0e', marginBottom: '0.25rem', fontSize: '0.9rem' }}>Illicit Drug Involvement</p>
-                  <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#713f12', marginBottom: '0.25rem' }}>82%</p>
-                  <p style={{ fontSize: '0.8rem', color: '#854d0e' }}>of overdose deaths</p>
-                </div>
-                <div style={{ backgroundColor: '#dcfce7', padding: '0.75rem', borderRadius: '8px', textAlign: 'center' }}>
-                  <p style={{ color: '#166534', marginBottom: '0.25rem', fontSize: '0.9rem' }}>Prescribed Opioids</p>
-                  <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#14532d', marginBottom: '0.25rem' }}>22,350</p>
-                  <p style={{ fontSize: '0.8rem', color: '#166534' }}>17% of population</p>
-                </div>
-              </div>
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              gap: '15px',
+              padding: '0 10px'
+                }}>
+  {/* Row 1: Red and Blue cards */}
+  <div style={{ backgroundColor: '#fee2e2', padding: '0.75rem', borderRadius: '8px', textAlign: 'center' }}>
+    <p style={{ color: '#991b1b', marginBottom: '0.25rem', fontSize: '0.9rem' }}>Overdose Deaths</p>
+    <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#7f1d1d', marginBottom: '0.25rem' }}>127</p>
+    <p style={{ fontSize: '0.8rem', color: '#991b1b' }}>97 per 100k people</p>
+  </div>
+  <div style={{ backgroundColor: '#dbeafe', padding: '0.75rem', borderRadius: '8px', textAlign: 'center' }}>
+    <p style={{ color: '#1e40af', marginBottom: '0.25rem', fontSize: '0.9rem' }}>Emergency Department Visits</p>
+    <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#1e3a8a', marginBottom: '0.25rem' }}>612</p>
+    <p style={{ fontSize: '0.8rem', color: '#1e40af' }}>469 per 100k people</p>
+  </div>
+  {/* Row 2: Yellow and Green cards */}
+  <div style={{ backgroundColor: '#fef9c3', padding: '0.75rem', borderRadius: '8px', textAlign: 'center' }}>
+    <p style={{ color: '#854d0e', marginBottom: '0.25rem', fontSize: '0.9rem' }}>Illicit Drug Involvement</p>
+    <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#713f12', marginBottom: '0.25rem' }}>82%</p>
+    <p style={{ fontSize: '0.8rem', color: '#854d0e' }}>of overdose deaths</p>
+  </div>
+  <div style={{ backgroundColor: '#dcfce7', padding: '0.75rem', borderRadius: '8px', textAlign: 'center' }}>
+    <p style={{ color: '#166534', marginBottom: '0.25rem', fontSize: '0.9rem' }}>Prescribed Opioids</p>
+    <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#14532d', marginBottom: '0.25rem' }}>22,350</p>
+    <p style={{ fontSize: '0.8rem', color: '#166534' }}>17% of population</p>
+  </div>
+</div>
             </Card>
           </div>
         </CardContent>
